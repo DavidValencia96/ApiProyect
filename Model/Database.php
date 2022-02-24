@@ -30,20 +30,20 @@ class Database
         return false;
     }
 
-    public function insert($query = "" , $params = [])
-    {
-        try {
-            $stmt = $this->executeStatement( $query , $params );
-            $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);               
-            $stmt->close();
-            echo "inset data : ok";
+    // public function insert($query = "" , $params = [])
+    // {
+    //     try {
+    //         $stmt = $this->executeStatement( $query , $params );
+    //         $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);               
+    //         $stmt->close();
+    //         echo "inset data : ok";
  
-            return $result;
-        } catch(Exception $e) {
-            throw New Exception( $e->getMessage() );
-        }
-        return false;
-    }
+    //         return $result;
+    //     } catch(Exception $e) {
+    //         throw New Exception( $e->getMessage() );
+    //     }
+    //     return false;
+    // }
  
     private function executeStatement($query = "" , $params = [])
     {
