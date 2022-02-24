@@ -17,4 +17,5 @@ class UserModel extends Database
     //                                                         'mede','juan@test.com','m','a',NULL,'2')");
     // }
 
+    
 }
